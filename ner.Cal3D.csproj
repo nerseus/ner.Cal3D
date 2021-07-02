@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F922E2F4-0E23-4A2B-BCC4-01FA6637A527}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ner.Cal3D</RootNamespace>
+    <AssemblyName>ner.Cal3D</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BufferCrawler.cs" />
+    <Compile Include="Core\BaseCal3DCollection.cs" />
+    <Compile Include="Cal3D.cs" />
+    <Compile Include="Core\XCal3DByte4.cs" />
+    <Compile Include="Core\XCal3DInt3.cs" />
+    <Compile Include="Core\XCal3DPoint2.cs" />
+    <Compile Include="Core\XCal3DPoint3.cs" />
+    <Compile Include="Core\XCal3DPoint4.cs" />
+    <Compile Include="IFormattable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XAF\XAF.cs" />
+    <Compile Include="XAF\XAFKeyFrame.cs" />
+    <Compile Include="XAF\XAFTrack.cs" />
+    <Compile Include="XMF\XMF.cs" />
+    <Compile Include="XMF\XMFBlendVertex.cs" />
+    <Compile Include="XMF\XMFFace.cs" />
+    <Compile Include="XMF\XMFFaceCollection.cs" />
+    <Compile Include="XMF\XMFInfluence.cs" />
+    <Compile Include="XMF\XMFInfluenceCollection.cs" />
+    <Compile Include="XMF\XMFMorph.cs" />
+    <Compile Include="XMF\XMFSpring.cs" />
+    <Compile Include="XMF\XMFSubmesh.cs" />
+    <Compile Include="XMF\XMFTextureCoordinate.cs" />
+    <Compile Include="XMF\XMFVertex.cs" />
+    <Compile Include="XPF\XPF.cs" />
+    <Compile Include="XPF\XPFKeyFrame.cs" />
+    <Compile Include="XPF\XPFTrack.cs" />
+    <Compile Include="XRF\XRF.cs" />
+    <Compile Include="XRF\XRFMap.cs" />
+    <Compile Include="XSF\XSF.cs" />
+    <Compile Include="XSF\XSFBone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
